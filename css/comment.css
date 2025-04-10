@@ -1,0 +1,14 @@
+.twikoo .el-input__inner,.twikoo .el-textarea__inner {
+    transition: background-position-y .3s ease-in-out 0s!important
+}
+
+.twikoo .el-input__inner:focus,.twikoo .el-textarea__inner:focus {
+    background-position-y: 350px
+}
+
+.tk-input .el-textarea__inner {
+    -moz-background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain
+}
