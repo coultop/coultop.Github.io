@@ -34,5 +34,5 @@ button {
 }
 .addBtn button:hover {
     background: var(--theme-color);
-    color: #fff;
+    color: #7f1cbd;
 }
