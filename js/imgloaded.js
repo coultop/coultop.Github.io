@@ -81,7 +81,7 @@
     smallSrc: '/img/xiaotu.jpg', // 小图链接 尽可能配置小于100k的图片
     largeSrc: 'https://api.coul.top/coul.php', // 大图链接 最终显示的图片
     mobileSmallSrc: '/img/sjxt.jpg', // 手机端小图链接 尽可能配置小于100k的图片
-    mobileLargeSrc: 'http://tall.coul.top/coul.php', // 手机端大图链接 最终显示的图片
+    mobileLargeSrc: 'https://tall.coul.top/coul.php', // 手机端大图链接 最终显示的图片
     enableRoutes: ['/'],
     };
   
