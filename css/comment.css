@@ -1,14 +1,18 @@
-.twikoo .el-input__inner,.twikoo .el-textarea__inner {
-    transition: background-position-y .3s ease-in-out 0s!important
+/* 输入框动态背景过渡效果 */
+.twikoo .el-input__inner,
+.twikoo .el-textarea__inner {
+    transition: background-position-y 0.3s ease-in-out !important;
+    background-repeat: no-repeat;
 }
 
-.twikoo .el-input__inner:focus,.twikoo .el-textarea__inner:focus {
-    background-position-y: 350px
+/* 焦点状态背景位移 */
+.twikoo .el-input__inner:focus,
+.twikoo .el-textarea__inner:focus {
+    background-position-y: 100% !important; /* 更灵活的百分比定位 */
 }
 
+/* 文本域背景适配 */
 .tk-input .el-textarea__inner {
-    -moz-background-size: contain;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    background-size: contain
+    background-size: contain;
+    background-position: right bottom; /* 建议添加定位 */
 }
