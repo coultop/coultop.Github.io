@@ -14,7 +14,7 @@
   peoplecanvas: undefined,
   postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
   diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
-  LA51: {"enable":true,"ck":"3JzTCMZqBflOebeW","LingQueMonitorID":"3JzTCMZqBflOebeW"},
+  LA51: {"enable":true,"ck":null,"LingQueMonitorID":null},
   greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早上好鸭👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 状态很好，鼓励一下～","startTime":10,"endTime":10},{"greeting":"11点多啦, 在坚持一下就吃饭啦～","startTime":11,"endTime":11},{"greeting":"午安👋, 宝贝","startTime":12,"endTime":14},{"greeting":"🌈充实的一天辛苦啦！","startTime":14,"endTime":18},{"greeting":"19点喽, 奖励一顿丰盛的大餐吧🍔。","startTime":19,"endTime":19},{"greeting":"晚上好👋, 在属于自己的时间好好放松😌~","startTime":20,"endTime":24}]},
   twikooEnvId: 'https://twikoo.coul.top',
   commentBarrageConfig:undefined,
@@ -361,7 +361,7 @@ if (true) {
             color: color
           }
         },
-        data: ["LOON","Hexo","Tag Plugins","随机图","Qwrt","twikoo","voron"]
+        data: ["LOON","Hexo","随机图","Tag Plugins","Qwrt","twikoo","voron"]
       },
       yAxis: {
         name: '文章篇数',
@@ -389,7 +389,7 @@ if (true) {
       series: [{
         name: '文章篇数',
         type: 'bar',
-        data: [{"name":"LOON","value":4,"path":"tags/LOON/"},{"name":"Hexo","value":2,"path":"tags/Hexo/"},{"name":"Tag Plugins","value":1,"path":"tags/Tag-Plugins/"},{"name":"随机图","value":1,"path":"tags/随机图/"},{"name":"Qwrt","value":1,"path":"tags/Qwrt/"},{"name":"twikoo","value":1,"path":"tags/twikoo/"},{"name":"voron","value":1,"path":"tags/voron/"}],
+        data: [{"name":"LOON","value":4,"path":"tags/LOON/"},{"name":"Hexo","value":2,"path":"tags/Hexo/"},{"name":"随机图","value":1,"path":"tags/随机图/"},{"name":"Tag Plugins","value":1,"path":"tags/Tag-Plugins/"},{"name":"Qwrt","value":1,"path":"tags/Qwrt/"},{"name":"twikoo","value":1,"path":"tags/twikoo/"},{"name":"voron","value":1,"path":"tags/voron/"}],
         itemStyle: {
           borderRadius: [5, 5, 0, 0],
           color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
@@ -448,7 +448,7 @@ if (true) {
       },
       legend: {
         top: 'bottom',
-        data: ["loon","Tag Plugins","Hexo","随机图","qwrt","twikoo","voron"],
+        data: ["loon","随机图","Tag Plugins","Hexo","qwrt","twikoo","voron"],
         textStyle: {
           color: color
         }
@@ -467,7 +467,7 @@ if (true) {
         radius: ['15%', '90%'],
         center: ['50%', '55%'],
         sort: 'desc',
-        data: [{"name":"loon","value":4,"path":"categories/loon/","id":"cmadye15y000jgkcbeooogsen","parentId":"0"},{"name":"Tag Plugins","value":1,"path":"categories/Tag-Plugins/","id":"cmadye15j0004gkcb4t3p0pyq","parentId":"0"},{"name":"Hexo","value":1,"path":"categories/Hexo/","id":"cmadye15u000cgkcb9cboe2ij","parentId":"0"},{"name":"随机图","value":1,"path":"categories/随机图/","id":"cmadye164000tgkcbcxmg2545","parentId":"0"},{"name":"qwrt","value":1,"path":"categories/qwrt/","id":"cmadye16d001ggkcbc9n0hiic","parentId":"0"},{"name":"twikoo","value":1,"path":"categories/twikoo/","id":"cmadye16f001pgkcbcefafufc","parentId":"0"},{"name":"voron","value":1,"path":"categories/voron/","id":"cmadye16h001vgkcb84c24uht","parentId":"0"}],
+        data: [{"name":"loon","value":4,"path":"categories/loon/","id":"cmaeypeeu000kiccb3avaa9cy","parentId":"0"},{"name":"随机图","value":1,"path":"categories/随机图/","id":"cmaeypeel0004iccb48tje262","parentId":"0"},{"name":"Tag Plugins","value":1,"path":"categories/Tag-Plugins/","id":"cmaeypeer000ciccb73xp9yie","parentId":"0"},{"name":"Hexo","value":1,"path":"categories/Hexo/","id":"cmaeypeew000riccbehrz4r2o","parentId":"0"},{"name":"qwrt","value":1,"path":"categories/qwrt/","id":"cmaeypef1001giccb7wnmegc7","parentId":"0"},{"name":"twikoo","value":1,"path":"categories/twikoo/","id":"cmaeypef3001piccb0knv7vtv","parentId":"0"},{"name":"voron","value":1,"path":"categories/voron/","id":"cmaeypef4001viccb3cfbati7","parentId":"0"}],
         itemStyle: {
           borderColor: '#fff',
           borderWidth: 2,
@@ -489,7 +489,7 @@ if (true) {
           color: color,
           formatter: '{b} : {c} ({d}%)'
         },
-        data: [{"name":"loon","value":4,"path":"categories/loon/","id":"cmadye15y000jgkcbeooogsen","parentId":"0"},{"name":"Tag Plugins","value":1,"path":"categories/Tag-Plugins/","id":"cmadye15j0004gkcb4t3p0pyq","parentId":"0"},{"name":"Hexo","value":1,"path":"categories/Hexo/","id":"cmadye15u000cgkcb9cboe2ij","parentId":"0"},{"name":"随机图","value":1,"path":"categories/随机图/","id":"cmadye164000tgkcbcxmg2545","parentId":"0"},{"name":"qwrt","value":1,"path":"categories/qwrt/","id":"cmadye16d001ggkcbc9n0hiic","parentId":"0"},{"name":"twikoo","value":1,"path":"categories/twikoo/","id":"cmadye16f001pgkcbcefafufc","parentId":"0"},{"name":"voron","value":1,"path":"categories/voron/","id":"cmadye16h001vgkcb84c24uht","parentId":"0"}],
+        data: [{"name":"loon","value":4,"path":"categories/loon/","id":"cmaeypeeu000kiccb3avaa9cy","parentId":"0"},{"name":"随机图","value":1,"path":"categories/随机图/","id":"cmaeypeel0004iccb48tje262","parentId":"0"},{"name":"Tag Plugins","value":1,"path":"categories/Tag-Plugins/","id":"cmaeypeer000ciccb73xp9yie","parentId":"0"},{"name":"Hexo","value":1,"path":"categories/Hexo/","id":"cmaeypeew000riccbehrz4r2o","parentId":"0"},{"name":"qwrt","value":1,"path":"categories/qwrt/","id":"cmaeypef1001giccb7wnmegc7","parentId":"0"},{"name":"twikoo","value":1,"path":"categories/twikoo/","id":"cmaeypef3001piccb0knv7vtv","parentId":"0"},{"name":"voron","value":1,"path":"categories/voron/","id":"cmaeypef4001viccb3cfbati7","parentId":"0"}],
         itemStyle: {
           emphasis: {
             shadowBlur: 10,
