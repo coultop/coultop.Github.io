@@ -78,9 +78,9 @@
   };
   
   const config = {
-    smallSrc: 'https://pc.coul.top/coul.php', // 小图链接 尽可能配置小于100k的图片
+    smallSrc: 'https://api.coul.top/coul.php', // 小图链接 尽可能配置小于100k的图片
     largeSrc: 'https://api.coul.top/coul.php', // 大图链接 最终显示的图片
-    mobileSmallSrc: 'https://sj.coul.top/coul.php', // 手机端小图链接 尽可能配置小于100k的图片
+    mobileSmallSrc: 'https://tall.coul.top/coul.php', // 手机端小图链接 尽可能配置小于100k的图片
     mobileLargeSrc: 'https://tall.coul.top/coul.php', // 手机端大图链接 最终显示的图片
     enableRoutes: ['/'],
     };
