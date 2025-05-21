@@ -1,86 +1,15 @@
-const CountdownTimer = (() => {
-    const config = {
-        targetDate: "2026-02-17",
-        targetName: "春节",
-        units: {
-            day: { text: "今日", unit: "小时" },
-            week: { text: "本周", unit: "天" },
-            month: { text: "本月", unit: "天" },
-            year: { text: "本年", unit: "天" }
-        }
-    };
-
-    const calculators = {
-        day: () => {
-            const hours = new Date().getHours();
-            return {
-                remaining: 24 - hours,
-                percentage: (hours / 24) * 100
-            };
-        },
-        week: () => {
-            const day = new Date().getDay();
-            const passed = day === 0 ? 6 : day - 1;
-            return {
-                remaining: 6 - passed,
-                percentage: ((passed + 1) / 7) * 100
-            };
-        },
-        month: () => {
-            const now = new Date();
-            const total = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
-            const passed = now.getDate() - 1;
-            return {
-                remaining: total - passed,
-                percentage: (passed / total) * 100
-            };
-        },
-        year: () => {
-            const now = new Date();
-            const start = new Date(now.getFullYear(), 0, 1);
-            const total = 365 + (now.getFullYear() % 4 === 0 ? 1 : 0);
-            const passed = Math.floor((now - start) / 86400000);
-            return {
-                remaining: total - passed,
-                percentage: (passed / total) * 100
-            };
-        }
-    };
-
-    function updateCountdown() {
-        const elements = ['eventName', 'eventDate', 'daysUntil', 'countRight']
-            .map(id => document.getElementById(id));
-        
-        if (elements.some(el => !el)) return;
-        
-        const [eventName, eventDate, daysUntil, countRight] = elements;
-        const now = new Date();
-        const target = new Date(config.targetDate);
-        
-        eventName.textContent = config.targetName;
-        eventDate.textContent = config.targetDate;
-        daysUntil.textContent = Math.round((target - now.setHours(0,0,0,0)) / 86400000);
-        
-        countRight.innerHTML = Object.entries(config.units)
-            .map(([key, {text, unit}]) => {
-                const {remaining, percentage} = calculators[key]();
-                return `
+let CountdownTimer=(()=>{let o={targetDate:"2026-02-17",targetName:"春节",units:{day:{text:"今日",unit:"小时"},week:{text:"本周",unit:"天"},month:{text:"本月",unit:"天"},year:{text:"本年",unit:"天"}}},c={day:()=>{var e=(new Date).getHours();return{remaining:24-e,percentage:e/24*100}},week:()=>{var e=(new Date).getDay(),e=0===e?6:e-1;return{remaining:6-e,percentage:(1+e)/7*100}},month:()=>{var e=new Date,t=new Date(e.getFullYear(),e.getMonth()+1,0).getDate(),e=e.getDate()-1;return{remaining:t-e,percentage:e/t*100}},year:()=>{var e=new Date,t=new Date(e.getFullYear(),0,1),n=365+(e.getFullYear()%4==0?1:0),e=Math.floor((e-t)/864e5);return{remaining:n-e,percentage:e/n*100}}};function t(){var e,t,n,a,r,i=["eventName","eventDate","daysUntil","countRight"].map(e=>document.getElementById(e));i.some(e=>!e)||([i,e,t,n]=i,a=new Date,r=new Date(o.targetDate),i.textContent=o.targetName,e.textContent=o.targetDate,t.textContent=Math.round((r-a.setHours(0,0,0,0))/864e5),n.innerHTML=Object.entries(o.units).map(([e,{text:t,unit:n}])=>{var{remaining:e,percentage:a}=c[e]();return`
                     <div class="cd-count-item">
-                        <div class="cd-item-name">${text}</div>
+                        <div class="cd-item-name">${t}</div>
                         <div class="cd-item-progress">
-                            <div class="cd-progress-bar" style="width: ${percentage}%; opacity: ${percentage/100}"></div>
-                            <span class="cd-percentage ${percentage >= 46 ? 'cd-many' : ''}">${percentage.toFixed(2)}%</span>
-                            <span class="cd-remaining ${percentage >= 60 ? 'cd-many' : ''}">
-                                <span class="cd-tip">还剩</span>${remaining}<span class="cd-tip">${unit}</span>
+                            <div class="cd-progress-bar" style="width: ${a}%; opacity: ${a/100}"></div>
+                            <span class="cd-percentage ${46<=a?"cd-many":""}">${a.toFixed(2)}%</span>
+                            <span class="cd-remaining ${60<=a?"cd-many":""}">
+                                <span class="cd-tip">还剩</span>${e}<span class="cd-tip">${n}</span>
                             </span>
                         </div>
                     </div>
-                `;
-            }).join('');
-    }
-
-    function injectStyles() {
-        const styles = `
+                `}).join(""))}let n,a=()=>{var e;(e=document.createElement("style")).textContent=`
             .card-countdown .item-content {
                 display: flex;
             }
@@ -175,22 +104,4 @@ const CountdownTimer = (() => {
                 transform: translateX(-10px);
                 opacity: 0;
             }
-        `;
-
-        const styleSheet = document.createElement("style");
-        styleSheet.textContent = styles;
-        document.head.appendChild(styleSheet);
-    }
-
-    let timer;
-    const start = () => {
-        injectStyles();
-        updateCountdown();
-        timer = setInterval(updateCountdown, 600000);
-    };
-    
-    ['pjax:complete', 'DOMContentLoaded'].forEach(event => document.addEventListener(event, start));
-    document.addEventListener('pjax:send', () => timer && clearInterval(timer));
-    
-    return { start, stop: () => timer && clearInterval(timer) };
-})();
+        `,document.head.appendChild(e),t(),n=setInterval(t,6e5)};return["pjax:complete","DOMContentLoaded"].forEach(e=>document.addEventListener(e,a)),document.addEventListener("pjax:send",()=>n&&clearInterval(n)),{start:a,stop:()=>n&&clearInterval(n)}})();
